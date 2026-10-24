@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shop.globalalfabet.com/sitemap.xml
