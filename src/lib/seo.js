@@ -22,7 +22,7 @@ const pages = {
   "/": {
     fullTitle: "Alfa Shop · Products, gift cards and airtime from Global Alfabet",
     description:
-      "Products, gift cards and airtime from Global Alfabet in Zimbabwe. Pick what you want and order it on WhatsApp. No account needed.",
+      "Products, gift cards and airtime from Global Alfabet. Pick what you want and order it on WhatsApp. No account needed.",
   },
   "/shop": {
     title: "Shop all",
@@ -240,7 +240,7 @@ export function llmsTxt() {
   return [
     `# ${site.name}`,
     "",
-    `> ${site.name} is the online shop of ${site.parent.name}, a technology company in ${site.country}. It sells ${site.parent.name}'s own products, gift cards and airtime. Buyers order on WhatsApp (+${site.whatsapp}); there is no checkout or account. Prices are in US dollars.`,
+    `> ${site.name} is the online shop of ${site.parent.name}, a technology company. It sells ${site.parent.name}'s own products, gift cards and airtime. Buyers order on WhatsApp (+${site.whatsapp}); there is no checkout or account. Prices are in US dollars.`,
     "",
     "## Sections",
     ...categories.map((c) => `- [${c.name}](${absolute(`/${c.slug}`)}): ${c.line}`),

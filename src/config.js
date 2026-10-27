@@ -2,7 +2,6 @@
 export const site = {
   name: "Alfa Shop",
   url: "https://shop.globalalfabet.com",
-  country: "Zimbabwe",
   currency: "USD", // every price in src/content/items.js is in US dollars
   email: "hello@globalalfabet.com",
   phone: "+263 772 906 967",
