@@ -25,7 +25,7 @@ export const faq = [
   },
   {
     q: "Is the price on the site the final price?",
-    a: "It's the price of the item. We confirm the total before you pay, including delivery if there is any.",
+    a: "It's the item's price today. Prices are subject to change, so we confirm the price and the total, including any delivery, in the chat before you pay.",
   },
   {
     q: "Can I order more than one thing?",
