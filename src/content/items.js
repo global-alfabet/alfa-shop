@@ -22,7 +22,7 @@ export const items = [
     id: "gift-card",
     name: "Gift card",
     category: "gift-cards",
-    summary: "A gift card code, sent to your WhatsApp.",
+    summary: "A gift card code, delivered digitally.",
     description: [
       "This is an example of how a gift card will look on Alfa Shop.",
       "Real gift cards will name the store they're for and the values we have in stock.",
@@ -46,7 +46,7 @@ export const items = [
     id: "airtime-card",
     name: "Airtime top-up card",
     category: "airtime",
-    summary: "Airtime for your phone, sent to your WhatsApp.",
+    summary: "Airtime for your phone, delivered digitally.",
     description: [
       "This is an example of how airtime will look on Alfa Shop.",
       "Real listings will name the mobile network and the amounts we have in stock.",

@@ -11,13 +11,13 @@ export const categories = [
   {
     slug: "gift-cards",
     name: "Gift cards",
-    line: "Codes we send to you on WhatsApp.",
+    line: "Codes delivered digitally.",
     art: "giftcard",
   },
   {
     slug: "airtime",
     name: "Airtime",
-    line: "Top-up cards, sent on WhatsApp.",
+    line: "Top-up cards, delivered digitally.",
     art: "airtime",
   },
 ];
@@ -27,11 +27,11 @@ export const categoryBySlug = Object.fromEntries(categories.map((c) => [c.slug, 
 // How an item reaches the buyer. Every item has one of these as `delivery`.
 export const deliveryTypes = {
   digital: {
-    label: "Sent on WhatsApp",
-    detail: "Nothing to collect. We send the code or card to your WhatsApp once you've paid.",
+    label: "Delivered digitally",
+    detail: "Nothing to collect. We send you the code or card once you've paid.",
   },
   physical: {
     label: "Delivery or collection",
-    detail: "We agree delivery or collection with you on WhatsApp when we confirm your order.",
+    detail: "We agree delivery or collection with you when we confirm your order.",
   },
 };

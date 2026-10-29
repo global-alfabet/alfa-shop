@@ -3,7 +3,6 @@ import Icon from "../components/Icon.jsx";
 import { steps, faq } from "../content/ordering.js";
 import { deliveryTypes } from "../content/categories.js";
 import { askMessage, whatsappLink } from "../lib/whatsapp.js";
-import { site } from "../config.js";
 
 export default function HowToOrder() {
   return (
@@ -12,7 +11,8 @@ export default function HowToOrder() {
         <div className="page-head">
           <h1>How to order</h1>
           <p className="lead">
-            Every order is a WhatsApp message to Global Alfabet on {site.phone}. There's no checkout and no account.
+            Order online in a few taps, with no account. Your order is sent to Global Alfabet as a WhatsApp message, so
+            you can ask questions in the same chat.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function HowToOrder() {
               Shop all
             </Link>
             <a className="text-link" href={whatsappLink(askMessage())} target="_blank" rel="noreferrer">
-              Ask us on WhatsApp <Icon name="chevron" size={16} />
+              Ask us a question <Icon name="chevron" size={16} />
             </a>
           </div>
         </section>

@@ -6,7 +6,7 @@ export const steps = [
   },
   {
     title: "Send us the order",
-    text: "Tap Order on WhatsApp. The message is written for you, with the item, quantity and total.",
+    text: "Tap Order now. Your order is written out for you, with the item, quantity and total, ready to send.",
   },
   {
     title: "We confirm and send it",
@@ -17,11 +17,11 @@ export const steps = [
 export const faq = [
   {
     q: "Do I need an account?",
-    a: "No. You order by sending us a WhatsApp message. There's nothing to sign up for on this site.",
+    a: "No. Pick an item and send us your order. There's nothing to sign up for on this site.",
   },
   {
     q: "How do I pay?",
-    a: "When we confirm your order on WhatsApp, we tell you the total and the ways you can pay.",
+    a: "When we confirm your order, we tell you the total and the ways you can pay.",
   },
   {
     q: "Is the price on the site the final price?",
@@ -29,11 +29,11 @@ export const faq = [
   },
   {
     q: "Can I order more than one thing?",
-    a: "Yes. Choose a quantity on the item page, or send one message per item. You can also list everything you want in one WhatsApp chat.",
+    a: "Yes. Choose a quantity on the item page, or send one message per item. You can also list everything you want in one message.",
   },
   {
     q: "How do gift cards and airtime arrive?",
-    a: "We send the code or card to your WhatsApp once you've paid. Nothing is posted and there's nothing to collect.",
+    a: "We send you the code or card digitally once you've paid. Nothing is posted and there's nothing to collect.",
   },
   {
     q: "Can I sell my own products on Alfa Shop?",

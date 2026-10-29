@@ -35,7 +35,7 @@ export default function Nav() {
         </nav>
         <a className="btn btn-small nav-cta" href={whatsappLink(askMessage())} target="_blank" rel="noreferrer">
           <Icon name="chat" size={16} />
-          WhatsApp us
+          Get in touch
         </a>
         <button
           className="nav-toggle"
@@ -53,7 +53,7 @@ export default function Nav() {
           </Link>
         ))}
         <a href={whatsappLink(askMessage())} target="_blank" rel="noreferrer">
-          WhatsApp us
+          Get in touch
         </a>
       </nav>
     </header>
