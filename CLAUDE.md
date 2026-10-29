@@ -37,7 +37,13 @@ public/                     logos from the brand kit (github.com/global-alfabet/
 - Photos: Julius's own, or images the maker or distributor provides for sellers. Never copy a photo from another
   shop or website. No third-party logos as decoration.
 - Only claim what happens today: orders are WhatsApp messages; payment and delivery are agreed in the chat. Don't
-  name payment methods, delivery areas or times unless Julius confirms them.
+  name payment methods, delivery areas or times unless Julius confirms them. Headlines, buttons and descriptions use
+  generic shop words ("Order now", "Order online", "Get in touch", "delivered digitally"), not "Order on WhatsApp"
+  or "See it here"; the item page note and How to order still say plainly that the order opens WhatsApp. Never
+  claim a cart, checkout, card payments or accounts.
+- Analytics: Google Analytics 4 only after the visitor accepts, through `src/lib/consent.js` (the same file on every
+  Global Alfabet site; change it everywhere or nowhere). The ID goes in `analytics.ga4` in `src/config.js`. Never send
+  names, phone numbers or order messages in events. Social profile links are `social` in `src/config.js`.
 - Section slugs are top-level addresses (/products, /gift-cards, /airtime): a new one must not clash with another page.
 - SEO: components must render the same on the server and in the browser. Read `window`, `document` or the search
   query only inside effects. A new page needs an entry in `pages` in `src/lib/seo.js` (title under 60 characters,

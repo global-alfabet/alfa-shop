@@ -3,7 +3,7 @@
 **shop.globalalfabet.com**: things Global Alfabet sells, ordered on WhatsApp. A Global Alfabet product.
 
 Version 1 is simple on purpose: Global Alfabet's own products, gift cards and airtime, listed on the site. Buyers pick
-an item (and an amount or option if it has them), tap **Order on WhatsApp**, and send the message the site writes for
+an item (and an amount or option if it has them), tap **Order now**, and send the message the site writes for
 them. There's no cart, checkout, account or payment on the site. Other sellers can join later.
 
 React 18 + Vite + react-router, plain JavaScript. Every page is prerendered at build time for search engines and
@@ -55,6 +55,14 @@ itself when no examples are left.
 Orders go to the WhatsApp number in `src/config.js` (`whatsapp`, digits only). The message lists the item, option,
 quantity, total and a link back to the item. Prices on the site are the item price: confirm the total, delivery and
 how to pay in the chat.
+
+## Analytics, cookies and social links
+
+- Google Analytics 4 runs only after a visitor presses Accept on the cookie banner (`src/lib/consent.js`, the same
+  file on every Global Alfabet site). Paste the measurement ID (`G-…`) into `analytics.ga4` in `src/config.js`; while
+  it's empty there's no banner and nothing is measured. "Cookie settings" in the footer changes the answer.
+- The footer links to our social profiles from `social` in `src/config.js`. "#" is a placeholder until the real links
+  are in; an empty value hides that network.
 
 ## Deploy (Netlify)
 

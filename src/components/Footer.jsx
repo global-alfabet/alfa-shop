@@ -3,6 +3,8 @@ import { site } from "../config.js";
 import { categories } from "../content/categories.js";
 import { asset } from "../lib/asset.js";
 import { askMessage, whatsappLink } from "../lib/whatsapp.js";
+import { openCookieSettings } from "../lib/consent.js";
+import SocialLinks from "./SocialLinks.jsx";
 
 export default function Footer() {
   return (
@@ -31,6 +33,13 @@ export default function Footer() {
               <li>
                 <Link to="/privacy">Privacy</Link>
               </li>
+              {site.analytics.ga4 && (
+                <li>
+                  <button type="button" className="footer-link" onClick={openCookieSettings}>
+                    Cookie settings
+                  </button>
+                </li>
+              )}
             </ul>
           </div>
           <div>
@@ -59,6 +68,7 @@ export default function Footer() {
                 <a href={`mailto:${site.email}`}>{site.email}</a>
               </li>
             </ul>
+            <SocialLinks links={site.social} name={site.name} />
           </div>
         </div>
         <div className="footer-base">

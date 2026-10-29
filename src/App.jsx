@@ -3,6 +3,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import Seo from "./components/Seo.jsx";
+import CookieBanner from "./components/CookieBanner.jsx";
+import { site } from "./config.js";
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
 import Item from "./pages/Item.jsx";
@@ -43,6 +45,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <CookieBanner measurementId={site.analytics.ga4} policyHref="/privacy#cookies" />
     </>
   );
 }

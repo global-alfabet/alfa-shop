@@ -14,7 +14,7 @@ const SHARE_IMAGE = {
   url: "/og.png",
   width: 1200,
   height: 630,
-  alt: "Alfa Shop: products, gift cards and airtime from Global Alfabet, ordered on WhatsApp",
+  alt: "Alfa Shop: products, gift cards and airtime from Global Alfabet",
 };
 
 // Titles show as "<title> · Alfa Shop" (under 60 characters). Descriptions under about 160 characters.
@@ -22,22 +22,22 @@ const pages = {
   "/": {
     fullTitle: "Alfa Shop · Products, gift cards and airtime from Global Alfabet",
     description:
-      "Products, gift cards and airtime from Global Alfabet. Pick what you want and order it on WhatsApp. No account needed.",
+      "Products, gift cards and airtime from Global Alfabet. Pick what you want and order online in a few taps. No account needed.",
   },
   "/shop": {
     title: "Shop all",
-    description: "Everything on Alfa Shop: products we deliver, gift cards and airtime we send on WhatsApp.",
+    description: "Everything on Alfa Shop: products we deliver, and gift cards and airtime delivered digitally.",
     crumb: "Shop all",
   },
   "/how-to-order": {
     title: "How to order",
     description:
-      "Order on WhatsApp: pick an item, send the message we write for you, and we reply to confirm the price and how to pay.",
+      "How to order: pick an item, send the order we write out for you, and we reply to confirm the price and how to pay.",
     crumb: "How to order",
   },
   "/privacy": {
     title: "Privacy",
-    description: "Alfa Shop has no accounts, forms or tracking. Orders are WhatsApp messages you choose to send.",
+    description: "What Alfa Shop collects: no accounts or forms, analytics only if you accept, and the orders you choose to send.",
     crumb: "Privacy",
   },
 };
@@ -138,7 +138,7 @@ export function getMeta(pathname) {
       title: `${item.example ? "Example: " : ""}${item.name} · ${site.name}`,
       description: item.example
         ? `An example of how ${cat?.name.toLowerCase() || "items"} will look on Alfa Shop. Not for sale.`
-        : `${item.summary} ${item.options ? "From " : ""}${money(fromPrice(item))}. Order on WhatsApp from Global Alfabet.`,
+        : `${item.summary} ${item.options ? "From " : ""}${money(fromPrice(item))}. Order online from Global Alfabet.`,
       // Example items are placeholders: keep them out of search results.
       canonical: item.example ? null : url,
       noindex: Boolean(item.example),
@@ -158,7 +158,7 @@ export function getMeta(pathname) {
   if (cat) {
     return {
       title: `${cat.name} · ${site.name}`,
-      description: `${cat.name} on Alfa Shop. ${cat.line} Order on WhatsApp from Global Alfabet.`,
+      description: `${cat.name} on Alfa Shop. ${cat.line} Order online from Global Alfabet.`,
       canonical: absolute(path),
       type: "website",
       image,

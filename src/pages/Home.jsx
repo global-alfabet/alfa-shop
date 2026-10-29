@@ -20,13 +20,13 @@ export default function Home() {
           <img className="hero-icon" src={asset("/alfa-shop-icon.svg")} alt="" width="88" height="88" />
           <p className="eyebrow">Alfa Shop</p>
           <h1>
-            See it here.
+            Shop online.
             <br />
-            Order on WhatsApp.
+            Order in a few taps.
           </h1>
           <p className="lead">
-            Products, gift cards and airtime from Global Alfabet. Pick what you want and send us the order in one tap.
-            No account, no checkout.
+            Products, gift cards and airtime from Global Alfabet. Pick what you want and send us your order in a few
+            taps. No account needed.
           </p>
           <div className="hero-actions">
             <Link className="btn" to="/shop">
@@ -102,10 +102,10 @@ export default function Home() {
           </ol>
           <div className="center cta-block">
             <h3>Have a question first?</h3>
-            <p className="muted">Ask us on WhatsApp about an item, stock or delivery.</p>
+            <p className="muted">Ask us about an item, stock or delivery.</p>
             <a className="btn" href={whatsappLink(askMessage())} target="_blank" rel="noreferrer">
               <Icon name="chat" size={18} />
-              WhatsApp us
+              Get in touch
             </a>
           </div>
         </div>

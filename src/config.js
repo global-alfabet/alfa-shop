@@ -9,4 +9,15 @@ export const site = {
   parent: { name: "Global Alfabet", url: "https://www.globalalfabet.com" },
   maps: "https://maps.globalalfabet.com",
   finda: "https://finda.globalalfabet.com",
+  // Google Analytics 4 measurement ID ("G-…"). Julius pastes it here. Empty: no analytics and no cookie banner.
+  // Analytics only runs after a visitor presses Accept (src/lib/consent.js).
+  analytics: { ga4: "" },
+  // Our social media profiles, shown in the footer. TODO: Julius sends the real links; "#" is a placeholder.
+  // Leave one empty ("") to hide it.
+  social: {
+    instagram: "#",
+    facebook: "#",
+    linkedin: "#",
+    youtube: "#",
+  },
 };

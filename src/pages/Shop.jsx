@@ -31,7 +31,7 @@ export default function Shop({ category }) {
         <div className="page-head">
           <h1>{cat ? cat.name : "Shop all"}</h1>
           <p className="lead">
-            {cat ? cat.line : "Products we deliver, and gift cards and airtime we send on WhatsApp."}
+            {cat ? cat.line : "Products we deliver, and gift cards and airtime delivered digitally."}
           </p>
         </div>
 
@@ -76,8 +76,8 @@ export default function Shop({ category }) {
           <div className="empty">
             <h2>Nothing matches “{query}”.</h2>
             <p className="muted">
-              Try fewer words, or <Link to="/shop">look through everything</Link>. If you can't find it, ask us on
-              WhatsApp.
+              Try fewer words, or <Link to="/shop">look through everything</Link>. If you can't find it, get in touch
+              and ask us.
             </p>
           </div>
         )}

@@ -136,7 +136,7 @@ function ItemView({ id }) {
                   rel="noreferrer"
                 >
                   <Icon name="chat" size={18} />
-                  Order on WhatsApp
+                  Order now
                 </a>
               ) : (
                 <button type="button" className="btn btn-order" disabled>
@@ -155,7 +155,7 @@ function ItemView({ id }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Ask us on WhatsApp
+                    Ask us
                   </a>
                 </>
               )}
