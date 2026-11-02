@@ -9,6 +9,7 @@ export default function Privacy() {
         <p className="lead">
           Alfa Shop asks you for nothing. There are no accounts or forms
           {site.analytics.ga4 ? ", and analytics cookies are set only if you accept." : ", and no cookies or tracking."}
+          {site.analytics.cloudflare ? " We count visits without cookies." : ""}
         </p>
 
         <h2>Ordering</h2>
@@ -26,6 +27,15 @@ export default function Privacy() {
         </p>
 
         <h2 id="cookies">Cookies and analytics</h2>
+        {site.analytics.cloudflare && (
+          <p>
+            <b>Visit counts, without cookies:</b> we use Cloudflare Web Analytics to count visits, whatever you choose
+            on the cookie banner. It sets no cookies, stores nothing on your device and doesn't follow you to other
+            websites. It records the page address you open, the site you came from, your country, your type of device
+            and browser, and how fast the page loaded. Cloudflare does this for us and may process it outside your
+            country.
+          </p>
+        )}
         {site.analytics.ga4 ? (
           <>
             <p>
