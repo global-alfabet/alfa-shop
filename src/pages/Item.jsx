@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import Icon from "../components/Icon.jsx";
 import ItemCard, { ItemPicture } from "../components/ItemCard.jsx";
@@ -6,6 +6,8 @@ import NotFound from "./NotFound.jsx";
 import { asset } from "../lib/asset.js";
 import { money } from "../lib/money.js";
 import { askMessage, orderMessage, whatsappLink } from "../lib/whatsapp.js";
+import { track } from "../lib/consent.js";
+import { trackOnView } from "../lib/events.js";
 import { items, itemById, canOrder } from "../content/items.js";
 import { categoryBySlug, deliveryTypes } from "../content/categories.js";
 
@@ -22,6 +24,10 @@ function ItemView({ id }) {
   const [choiceIndex, setChoiceIndex] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const [photoIndex, setPhotoIndex] = useState(0);
+  // view_item: an item page was opened (item_id, item_category, example)
+  useEffect(() => {
+    if (item) return trackOnView("view_item", { item_id: item.id, item_category: item.category, example: !!item.example });
+  }, [item]);
 
   if (!item) return <NotFound />;
 
@@ -134,6 +140,10 @@ function ItemView({ id }) {
                   href={whatsappLink(orderMessage(item, { choice, quantity }))}
                   target="_blank"
                   rel="noreferrer"
+                  // order_start: Order now opened WhatsApp (item_id, item_category, example; never the message)
+                  onClick={() =>
+                    track("order_start", { item_id: item.id, item_category: item.category, example: !!item.example })
+                  }
                 >
                   <Icon name="chat" size={18} />
                   Order now

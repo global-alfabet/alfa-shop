@@ -62,7 +62,7 @@ export default function HowToOrder() {
         <section className="section-block cta-inline">
           <h2>Ready to look?</h2>
           <div className="hero-actions">
-            <Link className="btn" to="/shop">
+            <Link className="btn" to="/shop" data-cta="shop_all" data-placement="how_to_order">
               Shop all
             </Link>
             <a className="text-link" href={whatsappLink(askMessage())} target="_blank" rel="noreferrer">
