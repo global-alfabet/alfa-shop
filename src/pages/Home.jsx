@@ -29,7 +29,7 @@ export default function Home() {
             taps. No account needed.
           </p>
           <div className="hero-actions">
-            <Link className="btn" to="/shop">
+            <Link className="btn" to="/shop" data-cta="shop_all" data-placement="hero">
               Shop all
             </Link>
             <Link className="text-link" to="/how-to-order">

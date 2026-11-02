@@ -46,7 +46,8 @@ export default function Privacy() {
             <p>
               <b>What's measured:</b> the pages and items you open, how you arrived (for example from a search engine or
               a link), your approximate region (worked out from your IP address, which Google Analytics doesn't store),
-              your type of device and browser, and taps on our order, email and WhatsApp links. We never send Google
+              your type of device and browser, and taps on our order, email and WhatsApp links, our main buttons and
+              links to our other sites. We never send Google
               your name, email, phone number or what's in your order message. Google signals and advertising features
               are off.
             </p>
