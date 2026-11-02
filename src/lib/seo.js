@@ -20,7 +20,7 @@ const SHARE_IMAGE = {
 // Titles show as "<title> · Alfa Shop" (under 60 characters). Descriptions under about 160 characters.
 const pages = {
   "/": {
-    fullTitle: "Alfa Shop · Products, gift cards and airtime from Global Alfabet",
+    fullTitle: "Alfa Shop · Order gift cards, airtime and products online",
     description:
       "Products, gift cards and airtime from Global Alfabet. Pick what you want and order online in a few taps. No account needed.",
   },
@@ -63,9 +63,17 @@ function organization() {
     "@id": organizationId,
     name: site.parent.name,
     url: `${site.parent.url}/`,
+    logo: { "@type": "ImageObject", url: `${site.parent.url}/brand/global-alfabet/global-alfabet-icon-512.png`, width: 512, height: 512 },
     email: site.email,
     telephone: site.phone,
     address: { "@type": "PostalAddress", addressCountry: "ZW" },
+    // Our social profiles: tells search engines and AI assistants these accounts are ours.
+    sameAs: Object.values(site.social).filter(Boolean),
+    brand: [
+      { "@type": "Brand", name: "Alfa Shop", url: `${SITE_URL}/` },
+      { "@type": "Brand", name: "Alfa Maps", url: site.maps },
+      { "@type": "Brand", name: "Alfa Finda", url: site.finda },
+    ],
   };
 }
 
@@ -75,6 +83,7 @@ function website() {
     "@id": `${SITE_URL}/#website`,
     url: `${SITE_URL}/`,
     name: site.name,
+    description: "The online shop of Global Alfabet: its own products, gift cards and airtime, ordered online.",
     inLanguage: "en",
     publisher: { "@id": organizationId },
   };
@@ -257,6 +266,11 @@ export function llmsTxt() {
     "## Contact",
     `- WhatsApp: ${site.phone}`,
     `- Email: ${site.email}`,
+    "",
+    `## Other ${site.parent.name} websites`,
+    `- [${site.parent.name}](${site.parent.url}): the company behind Alfa Shop. It also designs and builds websites for businesses.`,
+    `- [Alfa Maps](${site.maps}): interactive 3D estates that property developers use to sell plots and houses.`,
+    `- [Alfa Finda](${site.finda}): search for businesses, attractions and places to visit.`,
     "",
   ].join("\n");
 }
