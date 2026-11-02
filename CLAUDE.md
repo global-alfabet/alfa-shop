@@ -44,6 +44,9 @@ public/                     logos from the brand kit (github.com/global-alfabet/
 - Analytics: Google Analytics 4 only after the visitor accepts, through `src/lib/consent.js` (the same file on every
   Global Alfabet site; change it everywhere or nowhere). The ID goes in `analytics.ga4` in `src/config.js`. Never send
   names, phone numbers or order messages in events. Social profile links are `social` in `src/config.js`.
+- Visit counts: Cloudflare Web Analytics runs for every visitor, whatever they answer on the cookie banner, because it
+  sets no cookies and stores nothing in the browser (src/lib/webAnalytics.js, the same file on every Global Alfabet site).
+  The token goes in `analytics.cloudflare` in `src/config.js`. Don't add anything that sets cookies or identifiers to it.
 - Section slugs are top-level addresses (/products, /gift-cards, /airtime): a new one must not clash with another page.
 - SEO: components must render the same on the server and in the browser. Read `window`, `document` or the search
   query only inside effects. A new page needs an entry in `pages` in `src/lib/seo.js` (title under 60 characters,
