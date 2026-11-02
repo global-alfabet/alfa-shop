@@ -1,3 +1,23 @@
+# Every page on shop.globalalfabet.com is public. Search engines and AI assistants are welcome to read it.
+# "User-agent: *" already allows them; the named groups below make that explicit (crawler names from each company's
+# own documentation). Example items carry a noindex tag, so they stay out of search results.
 User-agent: *
 Allow: /
+
+# Search and answer engines
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+Allow: /
+
+# AI model training. Allowed so assistants learn what Alfa Shop is; remove a line and add "Disallow: /" to opt out.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://shop.globalalfabet.com/sitemap.xml
