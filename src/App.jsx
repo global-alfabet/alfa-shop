@@ -6,6 +6,7 @@ import Seo from "./components/Seo.jsx";
 import CookieBanner from "./components/CookieBanner.jsx";
 import { site } from "./config.js";
 import { listenForClicks } from "./lib/events.js";
+import { pageChanged } from "./lib/consent.js";
 import Home from "./pages/Home.jsx";
 import Shop from "./pages/Shop.jsx";
 import Item from "./pages/Item.jsx";
@@ -24,7 +25,9 @@ function ScrollManager() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
   useEffect(listenForClicks, []); // calls to action and links to other Global Alfabet sites (src/lib/events.js)
+  useEffect(pageChanged, [pathname]); // answers changed elsewhere, and the Meta Pixel's PageView (src/lib/consent.js)
   return (
     <>
       <a className="skip-link" href="#main">
@@ -47,7 +50,12 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
-      <CookieBanner measurementId={site.analytics.ga4} countsVisits={!!site.analytics.cloudflare} policyHref="/privacy#cookies" />
+      <CookieBanner
+        measurementId={site.analytics.ga4}
+        metaPixel={site.analytics.metaPixel}
+        countsVisits={!!site.analytics.cloudflare}
+        policyHref="/privacy#cookies"
+      />
     </>
   );
 }
